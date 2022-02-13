@@ -1,14 +1,12 @@
-import React from 'react';
 import "./style/Button.css";
 
-export class Button extends React.Component {
-    render() {
-        return (
-            <div className="AppButton no-select" style={{flex: this.props.width}} onClick={this.props.onClick}>
-                {this.props.text}
-            </div>
-        );
-    }
+export const Button = (props) => {
+    return (
+        <div no-select className="AppButton" style={{flex: props.width}} onClick={props.onClick} >
+            {props.text}
+        </div>
+    );
+
 }
 
 Button.defaultProps = {

@@ -145,70 +145,49 @@ export class Calculator extends React.Component {
     }
 
     handleKeyPress(event) {
-        switch( event.key ) {
+        switch (event.key) {
             case "9":
-                this.pressNum('9')();
-                break;
+                this.pressNum('9')(); break
             case "8":
-                this.pressNum('8')();
-                break;
+                this.pressNum('8')(); break
             case "7":
-                this.pressNum('7')();
-                break;
+                this.pressNum('7')(); break
             case "6":
-                this.pressNum('6')();
-                break;
+                this.pressNum('6')(); break
             case "5":
-                this.pressNum('5')();
-                break;
+                this.pressNum('5')(); break
             case "4":
-                this.pressNum('4')();
-                break;
+                this.pressNum('4')(); break
             case "3":
-                this.pressNum('3')();
-                break;
+                this.pressNum('3')(); break
             case "2":
-                this.pressNum('2')();
-                break;
+                this.pressNum('2')(); break
             case "1":
-                this.pressNum('1')();
-                break;
+                this.pressNum('1')(); break
             case "0":
-                this.pressNum('0')();
-                break;
+                this.pressNum('0')(); break
             case ".":
-                this.pressDecimal()();
-                break;
+                this.pressDecimal()(); break
             case "+":
-                this.pressOper('+')();
-                break;
+                this.pressOper('+')(); break
             case "-":
-                this.pressOper('-')();
-                break;
+                this.pressOper('-')(); break
             case "*":
-                this.pressOper('*')();
-                break;
+                this.pressOper('*')(); break
             case "/":
-                this.pressOper('/')();
-                break;
+                this.pressOper('/')(); break
             case "=":
-                this.pressEquals()();
-                break;
+                this.pressEquals()(); break
             case "Backspace":
-                this.undo()();
-                break;
+                this.undo()(); break
             case "Enter":
-                this.pressEquals()();
-                break;
+                this.pressEquals()(); break
             case "Escape":
-                this.clear()();
-                break;
+                this.clear()(); break
             case "s":
-                this.pressInstantOper('√')();
-                break;
+                this.pressInstantOper('√')(); break
             case "%":
-                this.pressInstantOper('%')();
-                break;
+                this.pressInstantOper('%')(); break
             default: 
                 break;
         }
@@ -226,7 +205,7 @@ export class Calculator extends React.Component {
         return (
             <div className="Calculator">
                 <div className="CalcRow">
-                    <Screen state={this.state}/>
+                    <Screen value={this.state.value}/>
                 </div>
                 <div className="CalcRow">
                     <Button text="/" onClick={this.pressOper('/')} />
