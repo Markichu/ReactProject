@@ -1,0 +1,8 @@
+.CalcRow {
+    display: flex;  /* aligns all child elements (flex items) in a row */
+    width: 100%;
+}
+
+.Calculator {
+    width: 100vh;
+}

@@ -1,0 +1,26 @@
+.AppButton {
+    min-height: 20vh;
+    min-width: 20vh;
+    font-size: 4vmin;
+    outline: none;
+    background-color: #fff;
+    color: #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border which takes up no space */
+    box-shadow: 0px 0px 0px 2px #bebebe;
+
+}
+
+/* button on click colour with transition */
+.AppButton:active {
+    background-color: #b1b1b1;
+    transition: background-color 0.5s ease;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
