@@ -59,6 +59,7 @@ export const Calculator = () => {
                 operFunc = a => b => {console.log(a, b); return a / b};
                 break;
             default:
+                console.log('Invalid operator pressed.');
                 return;
         }
         
@@ -76,6 +77,7 @@ export const Calculator = () => {
                 case '%':
                     return String(Number(prevValue) / 100);
                 default:
+                    console.log("Invalid operator pressed.");
                     return prevValue;
             }
         });
@@ -104,42 +106,17 @@ export const Calculator = () => {
 
     const handleKeyPress = (event) => {
         switch (event.key) {
-            case "9":
-                pressNum('9')(); break
-            case "8":
-                pressNum('8')(); break
-            case "7":
-                pressNum('7')(); break
-            case "6":
-                pressNum('6')(); break
-            case "5":
-                pressNum('5')(); break
-            case "4":
-                pressNum('4')(); break
-            case "3":
-                pressNum('3')(); break
-            case "2":
-                pressNum('2')(); break
-            case "1":
-                pressNum('1')(); break
-            case "0":
-                pressNum('0')(); break
+            case "9": case "8": case "7": case "6": case "5": 
+            case "4": case "3": case "2": case "1": case "0":
+                pressNum(event.key)(); break
+            case "+": case "-": case "*": case "/":
+                pressOper(event.key)(); break
             case ".":
                 pressDecimal(); break
-            case "+":
-                pressOper('+')(); break
-            case "-":
-                pressOper('-')(); break
-            case "*":
-                pressOper('*')(); break
-            case "/":
-                pressOper('/')(); break
-            case "=":
+            case "=": case "Enter":
                 pressEquals(); break
             case "Backspace":
                 undo(); break
-            case "Enter":
-                pressEquals(); break
             case "Escape":
                 clear(); break
             case "s":
